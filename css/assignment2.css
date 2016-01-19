@@ -1,0 +1,50 @@
+header{
+  display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    height: 80px;
+    background-color: grey;
+    border-width: 15px;
+}
+.heading{
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-right: 200px;
+  padding-left: 50px;
+  font-size: 25px;
+}
+.maincontent{
+  float:left;
+  width: 450px;
+  height: 500px;
+  background-color: lightgrey;
+}
+footer{
+  display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    height: 80px;
+    background-color: grey;
+    border-width: 15px;
+}
+article{
+  background-color: lightgrey;
+  height: 600px;
+  width: 1400px;
+}
+aside{
+  float:left;
+  width: 450px;
+  background-color: lightgrey;
+}
+.columns{
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+.maintext{
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
