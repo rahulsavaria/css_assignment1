@@ -2,9 +2,93 @@ body {
   background: #fff;
 }
 .intro{
-  width: 800px;
+
 
 }
+.wrapper{
+  background-color:#e5fff5;
+}
+.combine{
+  background-color: #A8DC9E;
+  margin-left:-15%;
+  padding-left: 15%;
+
+
+}
+header{
+  background-color:#91BA8A;
+  height:200px;
+}
+h1{
+  font-size:40px;
+  font-style:italic;
+  padding-top:50px;
+  padding-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  }
+h2{
+  font-size:20px;
+  font-style:italic;
+  text-align:left;
+  margin-left:30px;
+  margin-top:1px;
+  padding-bottom:10px;
+  margin-top:0;
+
+}
+
+
+}
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
+  font-family: fantasy;
+}
+.design-selection,.zen-resources{
+  padding-top: 0px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+
+h3{
+
+  font-size:25px;
+  font-family:cursive;
+}
+
+a{
+  color: aquamarine;
+  font-style: italic;
+}
+
+
+footer{
+  background-color:#91BA8A;
+
+}
+
+.by{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  font-family: cursive;
+}
+.designer-name{
+  font-family: cursive;
+}
+p{
+  font-family: cursive;
+  font-size: 20px;
+}
+.last{
+  text-align: center;
+
+}
+}
+@media screen and (min-width: 640px) and (max-width: 1024){
+body {
+  background: #fff;
+}
+
 .wrapper{
   background-color:#e5fff5;
   padding-top: 200px;
@@ -14,8 +98,8 @@ body {
   height: 500px;
   margin-left:-15%;
   padding-left: 15%;
-  width: 949px;
-  padding-right: 373px;
+
+
 
 }
 header{
@@ -78,6 +162,127 @@ a{
   color: aquamarine;
   font-style: italic;
 }
+aside{
+  height:1788px;
+
+
+  display: inline-block;
+  background-color: #e5fff5;
+  margin-top: -14%;
+  opacity: 0.9;
+}
+footer{
+  background-color:#91BA8A;
+  margin-left: -15%;
+  text-align:center;
+  height:150px;
+
+}
+.zen-resources{
+    height: 300px;
+
+    text-align: center;
+}
+.by{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  font-family: cursive;
+}
+.designer-name{
+  font-family: cursive;
+}
+p{
+  font-family: cursive;
+  font-size: 20px;
+}
+.last{
+  text-align: center;
+
+}
+}
+
+@media screen and (min-width: 1025px){
+body {
+  background: #fff;
+}
+.intro{
+  width: 800px;
+
+}
+.wrapper{
+  background-color:#e5fff5;
+  padding-top: 200px;
+}
+.combine{
+  background-color: #A8DC9E;
+  height: 600px;
+  margin-left:-15%;
+  padding-left: 15%;
+  width: 949px;
+  padding-right: 373px;
+
+}
+header{
+  background-color:#91BA8A;
+  padding-left: 400px;
+  height:200px;
+}
+h1{
+  font-size:40px;
+  font-style:italic;
+  padding-top:50px;
+  padding-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  }
+h2{
+  font-size:20px;
+  font-style:italic;
+  text-align:left;
+  margin-left:30px;
+  margin-top:1px;
+  padding-bottom:10px;
+  margin-top:0;
+
+}
+.design-name{
+  display: block;
+  font-family: monospace;
+  font-size: 20px;
+
+  padding-bottom: 10px;
+
+  text-align: left;
+
+
+}
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
+  padding-top: 20px;
+  font-family: fantasy;
+}
+.design-selection,.zen-resources{
+
+
+  height:690px;
+  padding-top: 0px;
+  margin-top: 5px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+.zen-resources{
+  padding-top: 50px;
+}
+h3{
+
+  font-size:25px;
+  font-family:cursive;
+}
+
+a{
+  color: aquamarine;
+  font-style: italic;
+}
 
 
 .main{
@@ -96,7 +301,7 @@ a{
   padding-left: 100px;
 }
 aside{
-  height:1788px;
+  height:2388px;
   width:373px;
   float:left;
   display: inline-block;
@@ -109,7 +314,8 @@ footer{
   margin-left: -15%;
   text-align:center;
   height:150px;
-  width: 1464px;
+  width: 1364px;
+  padding-right: 100px;
 }
 .zen-resources{
     height: 300px;
@@ -131,4 +337,5 @@ p{
 .last{
   text-align: center;
 
+}
 }
