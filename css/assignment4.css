@@ -6,7 +6,10 @@ header {
 }
 section {
   background: lightgreen;
-  width: 73%;
+  width: 75%;
+  border: -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 
 
   float: left;
@@ -19,7 +22,11 @@ aside {
   background: pink;
   width: 25%;
   float: right;
+  border:-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 header, article, section, .module {
   padding: 1%;
 }
+
