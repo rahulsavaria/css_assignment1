@@ -1,3 +1,18 @@
+
+@font-face{
+  font-family: "font2";
+  src: local("../fonts/verdemoderna") url("../fonts/verdemoderna.woff") format('woff');
+}
+
+
+@font-face{
+  font-family: "font3";
+  src: local("../fonts/libre-baskerville/LibreBaskerville-Regular.otf") url("../fonts/libre-baskerville/LibreBaskerville-Regular.otf") format('otf');
+}
+@font-face{
+  font-family: "font4";
+  src: local("../fonts/libre-baskerville/LibreBaskerville-Italic.otf") url("../fonts/libre-baskerville/LibreBaskerville-Italic.otf") format('otf');
+}
 body {
   background: #fff;
 }
@@ -6,7 +21,7 @@ body {
 
 }
 .wrapper{
-  background-color:#e5fff5;
+
 }
 .combine{
   background-color: #A8DC9E;
@@ -58,6 +73,7 @@ h3{
 a{
   color: aquamarine;
   font-style: italic;
+  font-family: "font2";
 }
 
 
@@ -68,8 +84,6 @@ footer{
 
 .by{
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 1px;
   font-family: cursive;
 }
 .designer-name{
@@ -128,8 +142,8 @@ h2{
 .design-name{
   display: block;
   font-family: monospace;
-  font-size: 20px;
 
+  font-size: large;
   padding-bottom: 10px;
 
   text-align: left;
@@ -155,7 +169,7 @@ h2{
 h3{
 
   font-size:25px;
-  font-family:cursive;
+  font-family:"myfont";
 }
 
 a{
@@ -211,22 +225,30 @@ body {
 
 }
 .wrapper{
-  background-color:#e5fff5;
+
   padding-top: 200px;
 }
 .combine{
-  background-color: #A8DC9E;
-  height: 600px;
+  background-color:#bad9ca;
+
   margin-left:-15%;
   padding-left: 15%;
   width: 949px;
   padding-right: 373px;
+  opacity: 0.7;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: url("../images/bamboo.png");
 
 }
 header{
   background-color:#91BA8A;
   padding-left: 400px;
   height:200px;
+  opacity: 0.9;
+  border-top: 10px solid;
+  border-color: #004548;
+  background:  url("../images/girdlines.png") 0 0 no-repeat, url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/huntington.jpg") 0 0 no-repeat;
 }
 h1{
   font-size:40px;
@@ -235,6 +257,7 @@ h1{
   padding-bottom: 0px;
   margin-top: 1px;
   margin-bottom: 0px;
+  font-family: 'Julius Sans One', sans-serif;
   }
 h2{
   font-size:20px;
@@ -248,23 +271,25 @@ h2{
 }
 .design-name{
   display: block;
-  font-family: monospace;
-  font-size: 20px;
+  font-family: 'Julius Sans One', sans-serif;
 
-  padding-bottom: 10px;
-
+  text-decoration: inherit;
+  font-size: larger;
+  padding-top: 5px;
   text-align: left;
 
 
 }
 .view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
   padding-top: 20px;
-  font-family: fantasy;
+  text-decoration: none;
+  font-size: larger;
+
 }
 .design-selection,.zen-resources{
 
 
-  height:690px;
+
   padding-top: 0px;
   margin-top: 5px;
   padding-left: 30px;
@@ -276,12 +301,18 @@ h2{
 h3{
 
   font-size:25px;
-  font-family:cursive;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+
 }
 
 a{
   color: aquamarine;
   font-style: italic;
+  font-family: 'Julius Sans One', sans-serif;
+  text-decoration: none;
 }
 
 
@@ -301,21 +332,25 @@ a{
   padding-left: 100px;
 }
 aside{
-  height:2388px;
+  height:1462px;
   width:373px;
   float:left;
   display: inline-block;
-  background-color: #e5fff5;
+  background-color: #e2ede8;
   margin-top: -14%;
-  opacity: 0.9;
+
+
+
 }
 footer{
-  background-color:#91BA8A;
+  background-color:#004548;
   margin-left: -15%;
   text-align:center;
-  height:150px;
-  width: 1364px;
+  height:100px;
+  width: 143.7%;
   padding-right: 100px;
+  padding-top: 40px;
+  z-index: 4;
 }
 .zen-resources{
     height: 300px;
@@ -324,18 +359,52 @@ footer{
 }
 .by{
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 1px;
-  font-family: cursive;
+  font-family: 'Libre Baskerville', serif;
+  background:  url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/girdlines.png") 0 0 no-repeat, url("../images/koi.jpg") 0 0 no-repeat;
+  margin-left: -15%;
+  width: 154.3%;
+  height: 200px;
+
 }
 .designer-name{
-  font-family: cursive;
+  font-family: 'Libre Baskerville', serif;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: smaller;
 }
 p{
-  font-family: cursive;
+  font-family: 'Libre Baskerville', serif;
+  font-size: smaller;
 }
 .last{
   text-align: center;
 
+}
+.page-wrapper{
+  width: 1421px;
+}
+li{
+  list-style: none;
+  border-bottom: 0.1px solid #9EDCBA;
+  font-size: smaller;
+  padding-bottom: 8px;
+}
+.zen-validate-html,.zen-validate-css,.zen-license,.zen-accessibility,.zen-github{
+  font-family: "webfontregular";
+  font-size: 60px;
+  padding-right: 10px;
+  color: grey;
+}
+.sidebar a{
+  color: #96a8a9;
+}
+.by p{
+  font-size: 1.5em;
+  padding-left: 20%;
+  padding-right: 20%;
+  line-height: 3em;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 10px;
 }
 }
