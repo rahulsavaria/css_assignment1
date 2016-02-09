@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../css/pie.css">
+   <script type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
+  <script>
+  function generate(){
+    var ans="";
+
+    var number=document.getElementById("1").value;
+    if(number>=15){
+        document.getElementById("answer").innerHTML="please enter a number smaller than 15";
+
+      }
+    else  if(isNaN(number)){
+        document.getElementById("answer").innerHTML="please enter a number";
+
+      }
+    else if(number){
+
+    var res=Math.PI.toString().split('.');
+    var ne=res[1].split('');
+    str="3.";
+    document.getElementById("answer").innerHTML="3.";
+    for(var i=1;i<=number;i++){
+        //document.write(ne[i]);
+            str=str.concat(ne[i]);
+    }
+    document.getElementById("answer").innerHTML =str;
+
+  }
+
+  //document.getElementById("answer").innerHTML = "answer is" + ans;
+
+  // else if(number.String()){
+  //   document.getElementById("answer").innerHTML = "please enter a number";
+  // }
+  else{
+
+    document.getElementById("answer").innerHTML = "enter a valid number";
+  }
+    // document.write(finumber);
+    // document.write("no"+res[1]);
+    // document.write("fina---"+finumber*res[1]);
+    //document.write("3."+ res/finumber);
+
+    //alert(res[1]);
+    //alert(Math.pow(10,number));
+
+
+  }
+
+  </script>
+</head>
+<body>
+    <h1> Enter the value to print PI up to that many decimal places.</h1>
+  <form>
+    <center>
+    <div class="input">
+    Enter number: <input class="textbox" type="text" name ="text1" id="1"  placeholder="enter here">
+    </div>
+
+    <input class="button" type="button" value ="submit" name="button" onclick="generate()">
+
+    <div id="answer">
+    </div>
+    </center>
+  </form>
+</body>
+</html>
