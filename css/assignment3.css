@@ -1,0 +1,566 @@
+
+@font-face{
+  font-family: "font2";
+  src: local("../fonts/verdemoderna") url("../fonts/verdemoderna.woff") format('woff');
+}
+
+
+@font-face{
+  font-family: "font3";
+  src: local("../fonts/libre-baskerville/LibreBaskerville-Regular.otf") url("../fonts/libre-baskerville/LibreBaskerville-Regular.otf") format('otf');
+}
+@font-face{
+  font-family: "font4";
+  src: local("../fonts/libre-baskerville/LibreBaskerville-Italic.otf") url("../fonts/libre-baskerville/LibreBaskerville-Italic.otf") format('otf');
+}
+
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations,a{
+ color:#698988;
+
+}
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
+  padding-top: 40px;
+  text-decoration: none;
+  font-size: larger;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+p a{
+  color:aquamarine;
+}
+.by a{
+  color:white;
+
+}
+.by{
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  background:  url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/girdlines.png") 0 0 no-repeat, url("../images/koi.jpg") 0 0 no-repeat;
+  padding-top: 40px;
+  text-decoration: none;
+  height: 200px;
+  background-size: 100%;
+  font-size: 1em;
+
+
+}
+
+.combine{
+
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 5%;
+  background-image: url("../images/bamboo.png");
+  background-size: 100%;
+
+
+}
+header{
+   border-color: #004548;
+  background-size: 100%;
+  background:  url("../images/girdlines.png") 0 0 no-repeat, url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/huntington.jpg") 0 0 no-repeat;
+  height:200px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+}
+h1{
+  font-size:25px;
+  font-style:italic;
+  padding-top:100px;
+  padding-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: white;
+  }
+h2{
+  font-size:15px;
+  font-style:italic;
+  text-align:left;
+  margin-left:30px;
+  margin-top:1px;
+  padding-bottom:10px;
+  margin-top:0;
+  color: white;
+
+
+
+}
+
+.design-selection,.zen-resources{
+  padding-top: 0px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+
+h3{
+
+  font-size:25px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+
+}
+
+
+a{
+
+  text-decoration: none;
+
+
+}
+
+
+footer{
+  background-color:#004548;
+
+  text-align:center;
+  height:100px;
+
+  padding-top: 40px;
+  z-index: 4;
+}
+.zen-validate-html,.zen-validate-css,.zen-license,.zen-accessibility,.zen-github{
+  font-family: "webfontregular";
+  font-size: 30px;
+  padding-right: 10px;
+  color: grey;
+  padding-left: 10px;
+}
+
+p{
+  font-family: 'Libre Baskerville', serif;
+  font-size: smaller;
+  line-height: 30px;
+  font-size: 1em;
+  color: #004548;
+}
+aside{
+
+
+  background-color: #e2ede8;
+
+  border:-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
+  padding-top: 40px;
+  text-decoration: none;
+  font-size: larger;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+.designer-name{
+  font-family: 'Libre Baskerville', serif;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: smaller;
+  color:#698988;
+}
+.design-name{
+  display: block;
+  font-family: 'Julius Sans One', sans-serif;
+
+  text-decoration: inherit;
+  font-size: larger;
+  padding-top: 5px;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+li{
+  list-style: none;
+  border-bottom: 0.1px solid #D7DFDB;
+  color:#BAD9CA;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+.last{
+  text-align: center;
+
+}
+}
+@media only screen and (min-width: 640px) and (max-width:1024px){
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations,a{
+ color:#698988;
+
+}
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
+  padding-top: 40px;
+  text-decoration: none;
+  font-size: larger;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+p a{
+  color:aquamarine;
+}
+.by a{
+  color:white;
+
+}
+.by{
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  background:  url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/girdlines.png") 0 0 no-repeat, url("../images/koi.jpg") 0 0 no-repeat;
+  padding-top: 40px;
+  text-decoration: none;
+  height: 200px;
+  background-size: 100%;
+  font-size: 1em;
+
+
+}
+
+.combine{
+
+  margin-left:-15%;
+  padding-left: 15%;
+  background-image: url("../images/bamboo.png");
+  background-size: 100%;
+
+
+}
+header{
+   border-color: #004548;
+  background-size: 100%;
+  background:  url("../images/girdlines.png") 0 0 no-repeat, url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/huntington.jpg") 0 0 no-repeat;
+  height:200px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+}
+h1{
+  font-size:60px;
+  font-style:italic;
+  padding-top:100px;
+  padding-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: white;
+  }
+h2{
+  font-size:20px;
+  font-style:italic;
+  text-align:left;
+  margin-left:30px;
+  margin-top:1px;
+  padding-bottom:10px;
+  margin-top:0;
+  color: white;
+
+
+
+}
+
+.design-selection,.zen-resources{
+  padding-top: 0px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+
+h3{
+
+  font-size:25px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+
+}
+
+
+a{
+
+  text-decoration: none;
+
+
+}
+
+
+footer{
+  background-color:#004548;
+
+  text-align:center;
+  height:100px;
+  padding-right: 100px;
+  padding-top: 40px;
+  z-index: 4;
+}
+.zen-validate-html,.zen-validate-css,.zen-license,.zen-accessibility,.zen-github{
+  font-family: "webfontregular";
+  font-size: 50px;
+  padding-right: 30px;
+  color: grey;
+  padding-left: 30px;
+}
+
+p{
+  font-family: 'Libre Baskerville', serif;
+  font-size: smaller;
+  line-height: 30px;
+  font-size: 1em;
+  color: #004548;
+}
+aside{
+
+
+  background-color: #e2ede8;
+
+  border:-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
+  padding-top: 40px;
+  text-decoration: none;
+  font-size: larger;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+.designer-name{
+  font-family: 'Libre Baskerville', serif;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: smaller;
+  color:#698988;
+}
+.design-name{
+  display: block;
+  font-family: 'Julius Sans One', sans-serif;
+
+  text-decoration: inherit;
+  font-size: larger;
+  padding-top: 5px;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+li{
+  list-style: none;
+  border-bottom: 0.1px solid #D7DFDB;
+  color:#BAD9CA;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+.last{
+  text-align: center;
+
+}
+}
+@media screen and (min-width: 1025px){
+body {
+  background: #fff;
+}
+
+.wrapper{
+  margin-bottom: 1048px;
+}
+.combine{
+  background-color:#bad9ca;
+
+  margin-left:-15%;
+  padding-left: 15%;
+  width: 100%;
+  padding-right: 571px;
+  opacity: 0.7;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: url("../images/bamboo.png");
+
+}
+header{
+  background-color:#91BA8A;
+  padding-left: 400px;
+  height:300px;
+  opacity: 0.9;
+  border-top: 10px solid;
+  border-color: #004548;
+  background-size: 100%;
+  background:  url("../images/girdlines.png") 0 0 no-repeat, url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/huntington.jpg") 0 0 no-repeat;
+}
+h1{
+  font-size:60px;
+  font-style:italic;
+  padding-top:100px;
+  padding-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: white;
+  }
+h2{
+  font-size:20px;
+  font-style:italic;
+  text-align:left;
+  margin-left:30px;
+  margin-top:1px;
+  padding-bottom:10px;
+  margin-top:0;
+  color: white;
+
+}
+.design-name{
+  display: block;
+  font-family: 'Julius Sans One', sans-serif;
+
+  text-decoration: inherit;
+  font-size: larger;
+  padding-top: 5px;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations{
+  padding-top: 40px;
+  text-decoration: none;
+  font-size: larger;
+  text-align: left;
+  color:#8DA9A4;
+
+}
+.design-selection,.zen-resources{
+  padding-top: 0px;
+  margin-top: 5px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+.zen-resources{
+  padding-top: 50px;
+}
+h3{
+
+  font-size:25px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+
+}
+
+a{
+  color: aquamarine;
+
+  font-family: 'Julius Sans One', sans-serif;
+  text-decoration: none;
+}
+
+
+
+
+
+.main,.supporting{
+  width: 60%;
+  height: 200%;
+  float: left;
+  border:-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+padding-left: 100px;
+
+}
+aside{
+  height:100%;
+  width:35%;
+  float:right;
+  display: inline-block;
+  background-color: #e2ede8;
+
+  border:-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  display: table;
+
+
+
+
+}
+footer{
+  background-color:#004548;
+  margin-left: -15%;
+  text-align:center;
+  height:100px;
+  width: 177%;
+  padding-right: 100px;
+  padding-top: 40px;
+  z-index: 4;
+}
+.zen-resources{
+    height: 300px;
+
+    text-align: center;
+}
+.by{
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  background:  url("../images/gridlines-opaque.png") 0 0 no-repeat, url("../images/girdlines.png") 0 0 no-repeat, url("../images/koi.jpg") 0 0 no-repeat;
+  margin-left: -15%;
+  width: 190.2%;
+  height: 200px;
+  background-size: 100%;
+
+}
+.designer-name{
+  font-family: 'Libre Baskerville', serif;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: smaller;
+  color:#698988;
+}
+p{
+  font-family: 'Libre Baskerville', serif;
+  font-size: smaller;
+  line-height: 30px;
+  font-size: 1em;
+  color: #004548;
+
+}
+.last{
+  text-align: center;
+
+}
+
+li{
+  list-style: none;
+  border-bottom: 0.1px solid #D7DFDB;
+  color:#BAD9CA;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+.zen-validate-html,.zen-validate-css,.zen-license,.zen-accessibility,.zen-github{
+  font-family: "webfontregular";
+  font-size: 70px;
+  padding-right: 55px;
+  color: grey;
+  padding-left: 55px;
+}
+
+.by p{
+  font-size: 1.5em;
+  padding-left: 20%;
+  padding-right: 20%;
+  line-height: 3em;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 10px;
+  color:#BAD9CA;
+}
+.view-css,.css-resources,.zen-faq,.zen-submit,.zen-translations,a{
+  color:green;
+}
+p a{
+  color:aquamarine;
+}
+.by a{
+  color:white;
+}
+
+}

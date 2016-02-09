@@ -1,0 +1,13 @@
+.heading{
+  color:white;
+  font-size: 46px;
+  font-size: italic;
+  padding-top: 300px;
+}
+
+
+body {
+  background-image: url('bg.png');
+  background-size:1700px;
+
+  }
