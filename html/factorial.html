@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../css/pie.css">
+   <script type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
+  <script>
+  function generate(){
+    var flag=1;
+    var answer=0;
+    var number=document.getElementById("1").value;
+    // number=Math.floor(number/2);
+     if(isNaN(number) || number==0){
+        document.getElementById("answer").innerHTML="please enter a  valid number";
+        }
+    else if(number){
+    str="prime factors are ";
+    for(var i=2;i<=number;i++){
+      flag=1;
+      if(number%i==0){
+            for(var j=2;j<=i/2;j++){
+              if(i%j==0){
+              flag=flag+1;
+              break;
+              }
+            }
+        if(flag==1){
+                   str=str.concat(i).concat(" ");
+                 }
+      }
+    }
+      document.getElementById("answer").innerHTML =str+".";
+      }
+
+  else{
+
+    document.getElementById("answer").innerHTML = "enter a valid number";
+  }
+}
+</script>
+</head>
+<body>
+    <h1> Enter the a number to find the prime factorial</h1>
+  <form>
+    <center>
+    <div class="input">
+    Enter number: <input class="textbox" type="text" name ="text1" id="1"  placeholder="enter here">
+    </div>
+
+    <input class="button" type="button" value ="submit" name="button" onclick="generate()">
+
+    <div id="answer">
+    </div>
+    </center>
+  </form>
+</body>
+</html>
