@@ -49,11 +49,14 @@
   }
   var reg=/_*/;
   str=str.join("").toString();
-  //document.write(str);
-  //document.write(str+"\n");
+
+
   var n =str.search('_');
-  str=str.substring(0,n);
+  if(n>0){
+   str=str.substring(0,n);
+}
   document.getElementById("answer").innerHTML =str;
+
   //document.write("this is x-"+str);
 }
 function check(strngs){
