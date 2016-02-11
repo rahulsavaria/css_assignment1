@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../css/pie.css">
+   <script type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
+  <script>
+  function generate(){
+    var string = document.getElementById("1").value;
+    var metho=true;
+    while(metho == true)
+    {
+    var maximum=0;
+     var max=0;
+     var left=0;
+     var right=0;
+      //document.write("soososososododfjd");
+    var str=string.split('');
+    //document.write("some--"+str.length);
+    for(var i=0;i<=str.length;i++){
+      for(var j=i+1;j<=str.length;j++){
+         if(str[i] == str[j]){
+         max=j-i;
+         flag=1;
+         // document.write(max);
+        }
+        if(max>maximum){
+          maximum=max;
+           left=i;
+           right=j;
+          element=str[right];
+
+        }
+      }
+    }
+
+    //document.write("element--"+right);
+    //document.write("left--"+left);
+    //document.write(str);
+    str.splice(left,1);
+    str.splice(right-1,1);
+    str.push(element);
+    //document.write("this is x-"+str.join("").toString());
+    string=str.join("").toString();
+    metho=check(string);
+  }
+  var reg=/_*/;
+  str=str.join("").toString();
+  //document.write(str);
+  //document.write(str+"\n");
+  var n =str.search('_');
+  str=str.substring(0,n);
+  document.getElementById("answer").innerHTML =str;
+  //document.write("this is x-"+str);
+}
+function check(strngs){
+    var strn=strngs.split('');
+    //document.write("some--2--"+strn.length);
+    for(var i=0;i<=strn.length;i++){
+      for(var j=i+1;j<=strn.length;j++){
+         if(strn[i] == strn[j]){
+          return true;
+        }
+      }
+    }return false;
+  }
+
+
+
+  </script>
+</head>
+<body>
+    <h1> Enter the String</h1>
+  <form>
+    <center>
+    <div class="input">
+    Enter number: <input class="textbox" type="text" name ="text1" id="1"  placeholder="enter here">
+    </div>
+
+    <input class="button" type="button" value ="submit" name="button" onclick="generate()">
+
+    <div id="answer">
+    </div>
+    </center>
+  </form>
+</body>
+</html>
