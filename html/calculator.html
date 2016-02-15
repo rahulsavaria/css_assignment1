@@ -8,23 +8,72 @@
   <script type="text/javascript"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
 <script>
-//   $(document).ready(function () {
+    function calculate(){
+      var principal=document.getElementById("principal").value;
+      var rate=document.getElementById("rate").value;
+      rate=rate/100;
+      var time=document.getElementById("time").value;
+      var ci= principal * Math.pow((1.0+rate),time);
+      //var ci= [principal*rate* (1+rate)^time]/[(1+rate)^time-1]
+      //var ci = principal * (Math.pow(1 + rate, time) - 1) / rate;
+      if (document.getElementById('r1').checked) {
+          rate_value = document.getElementById('r1').value;
+      }
+      if (document.getElementById('r2').checked) {
+          rate_value = document.getElementById('r2').value;
+      }
+      if (document.getElementById('r3').checked) {
+          rate_value = document.getElementById('r3').value;
+      }
+      if(rate_value== 'weekly'){
+        ci=ci/(52*time);
+      }
+      if(rate_value=='monthly'){
+        ci=ci/(12*time);
+      }
+      if(rate_value=='yearly'){
+        ci=ci/(time);
+      }
+      document.getElementById("answer").innerHTML="the answer is "+ci;
 
-// });
+    }
   </script>
 </head>
-<body bgcolor="red">
-    something
-    <div id="text">
-        one something
+<body>
 
-    </div>
-    <div id="button">
-     one
-    </div>
-    <script>
+  <form id="myform">
+    <center>
+    <h1>Enter the details</h1>
+      <TABLE border='1'>
 
-  </script>
+      <tr>
+        <td>Enter the principal amount</td>
+        <td><input type="number" name="dateofbirth" id="principal"></td>
+      </tr>
+      <tr>
+        <td>Enter the rate </td>
+        <td><input type="text" name="days" ID="rate"></td>
+      </tr>
+      <tr>
+        <td>Enter the time</td>
+        <td><input type="text" name="hours" id="time"></td>
+      </tr>
+      <tr>
+        <td>Select the value</td>
 
-</body>
-</html>
+        <td><div id="tme">
+            <input type ="radio" name="monthly" id='r1' value="weekly">weekly
+            <input type ="radio" name="monthly" value="monthly" id='r2'>monthly
+            <input type ="radio" name="monthly"  value="yearly" id='r3'>yearly
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='2'><input type="button" value="calculate" onclick="calculate()"></td>
+      </tr>
+      </TABLE>
+      <div id="answer">
+      </div>
+    </center>
+  </form>
+</body></html>
