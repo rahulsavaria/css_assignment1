@@ -1,71 +1,47 @@
-
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <link rel="stylesheet" href=>
+  <link rel="stylesheet" href="../css/pie.css">
    <script type="text/javascript"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
- $('#start').click(function(){
-  var url=$('#url').val();
-  $.ajax({
+      $('#submit').click(function() {
+        var url1=$("#url").val();
+        alert(url1);
+        $.ajax({
+          url:url1,
+          dataType:"text",
+          //dataType:"jsonp",
+          //jsonp:"callback",
+    success:function(data)
+    {
+           alert("success");
+           var elements=$("<div>").html(data)[0].getElementById("answer");
+           for(var i = 0; i < elements.length; i++)
+           {
+            var theText = elements[i];
+           }
+           console.log(elements);
+           console.log(theText);
+    }
 
-    url: url,
-    headers: { 'Access-Control-Allow-Origin': '*' },
-    headers: { 'Access-Control-Allow-Headers': 'x-requested-with'},
-    //crossDomain: true,
-   // data: myData,
-    type: 'GET',
-    //crossDomain: true,
-    dataType: '',
-    success: function() { alert("Success"); },
-    error: function() { alert('Failed!'); },
+        });
+      });
+    });
 
-  });
 
-  // var url = $('#url').val();
-  // $.ajax({
-  //   url: url,
-  //   // dataType: 'text',
-  //   // type: 'POST',
-  //   success: function(data){
-  //     $(".rank").html(data);
-    //   if(response.hasOwnProperty('error')) {
-    //     $('.rank').html('Invalid URL');
-    //   }
-    //   else {
-    //     $('.rank').html(response.rank);
-    //   }
-    // },
-    // error: function(e){
-    //     $('.rank').html('Invalid URL or Some Error occured!');
 
- });
-});
+
   </script>
 </head>
 <body>
-
-  <form id="myform">
-    <center>
-    <h1>Enter the date you want to enter.</h1>
-      <TABLE border='1'>
-      <tr>
-        <Td><input type="button" value ="Start" id ="start"></Td>
-
-      </tr>
-
-      <tr>
-        <td>Enter the url</td>
-        <td><input type="text" name="days" id="url"></td>
-      </tr>
-
-      </TABLE>
-      <div class="rank"></div>
-    </center>
-  </form>
+ <center>
+   <input type="text" id="url">
+   <input type="button" id="submit" value ="click me">
+ </center>
 </body>
 </html>
