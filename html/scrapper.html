@@ -10,26 +10,45 @@
   <script>
     $(document).ready(function(){
       $('#submit').click(function() {
+        var te="the given links present are ";
+        document.getElementById("answer").innerHTML=te+"</br>";
         var url1=$("#url").val();
         alert(url1);
         $.ajax({
-          url:url1,
-          dataType:"text",
+          url : url1,
+         // method:'get',
           //dataType:"jsonp",
           //jsonp:"callback",
-    success:function(data)
-    {
+          success:function(data)
+        {
            alert("success");
-           var elements=$("<div>").html(data)[0].getElementById("answer");
-           for(var i = 0; i < elements.length; i++)
-           {
-            var theText = elements[i];
-           }
-           console.log(elements);
-           console.log(theText);
-    }
+           var elements=$("<div>").html(data)[0].getElementsByTagName("a");
+            for(var i = 0; i < elements.length; i++) {
+              var text = elements[i].firstChild.nodeValue;
+              console.log(text);
 
+              document.getElementById("answer").innerHTML +=text+"</br>";
+        }
+      }
         });
+    //     $.ajax({
+    //       url:url1,
+    //       dataType:"text",
+    //       //dataType:"jsonp",
+    //       //jsonp:"callback",
+    // success:function(data)
+    // {
+    //        alert("success");
+    //        var elements=$("<div>").html(data)[0].getElementById("answer");
+    //        for(var i = 0; i < elements.length; i++)
+    //        {
+    //         var theText = elements[i];
+    //        }
+    //        console.log(elements);
+    //        console.log(theText);
+    // }
+
+    //     });
       });
     });
 
@@ -42,6 +61,9 @@
  <center>
    <input type="text" id="url">
    <input type="button" id="submit" value ="click me">
+   <div id="answer">
+   </div>
  </center>
+
 </body>
 </html>
