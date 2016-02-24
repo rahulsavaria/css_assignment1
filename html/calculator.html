@@ -4,76 +4,125 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <link rel="stylesheet" href="../css/calculator.css">
-  <script type="text/javascript"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
-<script>
-    function calculate(){
-      var principal=document.getElementById("principal").value;
-      var rate=document.getElementById("rate").value;
-      rate=rate/100;
-      var time=document.getElementById("time").value;
-      var ci= principal * Math.pow((1.0+rate),time);
-      //var ci= [principal*rate* (1+rate)^time]/[(1+rate)^time-1]
-      //var ci = principal * (Math.pow(1 + rate, time) - 1) / rate;
-      if (document.getElementById('r1').checked) {
-          rate_value = document.getElementById('r1').value;
-      }
-      if (document.getElementById('r2').checked) {
-          rate_value = document.getElementById('r2').value;
-      }
-      if (document.getElementById('r3').checked) {
-          rate_value = document.getElementById('r3').value;
-      }
-      if(rate_value== 'weekly'){
-        ci=ci/(52*time);
-      }
-      if(rate_value=='monthly'){
-        ci=ci/(12*time);
-      }
-      if(rate_value=='yearly'){
-        ci=ci/(time);
-      }
-      document.getElementById("answer").innerHTML="the answer is "+ci;
+  <link rel="stylesheet" href="../css/pie.css">
 
+  <script  type="text/javascript" charset="utf-8" async defer>
+    function cal()
+    { //EMI = [P x R x (1+R)^N]/[(1+R)^N-1]
+       var principal_amount=document.getElementById("principal").value;
+       var rate=document.getElementById("rate").value;
+       var year=document.getElementById("year").value;
+       //document.getElementById("answer").innerHTML=principal_amount+"<br/>"+rate+"<br/>"+year;
+       var interval=document.getElementById("interval").value;
+       //document.getElementById("answer").innerHTML=n;
+       var otp=document.getElementById("otp").value;
+       if(interval=="yearly"){
+        n=1;
+        rate=rate/100;
+       }
+       else if(interval=="monthly")
+       {
+        n=12;
+        rate=rate/(12*100);
+       }
+       else if(interval="weekly")
+       {
+        n=52;
+        rate=rate/(52*100);
+       }
+       else if(interval="daily")
+       {
+        n=365;
+        rate=rate/(365*100);
+       }
+       principal_amount=principal_amount-otp;
+       //document.getElementById("answer").innerHTML=principal_amount;
+       /*rate=rate/100;
+       var k=1+rate/n;
+       var time=n*year;
+       var amount=principal_amount*Math.pow(k,time);
+       var monthly_EMI=amount/(12*year);
+       document.getElementById("answer").innerHTML=amount+"<br/>"+monthly_EMI;*/
+       var k=1+rate;
+       var time=n*year;
+       var c=Math.pow(k,time);
+       //var l=Math.pow(k,time-1);
+       var emi=Math.round(principal_amount*rate*c/(c-1));
+       document.getElementById("answer").innerHTML="Your EMI is:"+emi;
     }
   </script>
 </head>
 <body>
-
-  <form id="myform">
-    <center>
-    <h1>Enter the details</h1>
-      <TABLE border='1'>
-
-      <tr>
-        <td>Enter the principal amount</td>
-        <td><input type="number" name="dateofbirth" id="principal"></td>
-      </tr>
-      <tr>
-        <td>Enter the rate </td>
-        <td><input type="text" name="days" ID="rate"></td>
-      </tr>
-      <tr>
-        <td>Enter the time</td>
-        <td><input type="text" name="hours" id="time"></td>
-      </tr>
-      <tr>
-        <td>Select the value</td>
-
-        <td><div id="tme">
-            <input type ="radio" name="monthly" id='r1' value="weekly">weekly
-            <input type ="radio" name="monthly" value="monthly" id='r2'>monthly
-            <input type ="radio" name="monthly"  value="yearly" id='r3'>yearly
-            </div>
-        </td>
-      </tr>
-      <tr>
-        <td colspan='2'><input type="button" value="calculate" onclick="calculate()"></td>
-      </tr>
-      </TABLE>
-      <div id="answer">
-      </div>
+<center>
+        <h1 class="text1">Mortgage Calulator</h1>
+        <h3 class="text1">Enter the following data to compute the EMI</h3>
+        <table>
+            <form>
+                <tr>
+                    <td class="text1">
+                        enter the Principal Amount
+                    </td>
+                    <td>
+                         <input type="textbox" name="text1" type="text" id="principal" placeholder="enter your number here" class="textbox"><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text1">enter the rate</td>
+                    <td>
+                        <input type="textbox" name="text1" type="text" id="rate" placeholder="" class="textbox"><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="text1">enter the year</label>
+                    </td>
+                    <td>
+                        <input type="textbox" name="text1" type="text" id="year" placeholder="" class="textbox"><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="text1">enter the one time payment</label>
+                    </td>
+                    <td>
+                        <input type="textbox" name="text1" type="text" id="otp" placeholder="" class="textbox"><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label><select name="compounding Interval" id="interval">
+                               <option value="yearly" >yearly</option>
+                               <option value="monthly" >monthly</option>
+                               <option value="weekly" >weekly</option>
+                               <option value="daily" >Daily</option>
+                               </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" type="button" value="submit" name="button" onclick="cal()" id="button" class ="button">
+                    </td>
+                </tr>
+            </form>
+        </table>
     </center>
-  </form>
-</body></html>
+   <!--enter the number  <input type="textbox" name="text1" type="text" id="principal" placeholder="enter your number here"><br/>
+   enter the rate  <input type="textbox" name="text1" type="text" id="rate" placeholder=""><br/>
+   enter the year  <input type="textbox" name="text1" type="text" id="year" placeholder=""><br/>
+   enter the one time payment  <input type="textbox" name="text1" type="text" id="otp" placeholder=""><br/>
+​
+   <select name="compounding Interval" id="interval">
+     <option value="yearly" >yearly</option>
+     <option value="monthly" >monthly</option>
+     <option value="weekly" >weekly</option>
+     <option value="daily" >Daily</option>
+   </select>
+​
+   <input type="button" type="button" value="submit" name="button" onclick="cal()" id="button">-->
+   <div id="answer">
+​
+   </div>
+​
+</body>
+</html>
